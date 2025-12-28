@@ -6,13 +6,13 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Research_Prototype-green?style=for-the-badge)
 
-## 📄 Abstract
+## Abstract
 
 Dermatological diagnosis is inherently multimodal; clinicians rely on both visual inspection and patient history to differentiate between morphologically similar lesions. Traditional Computer-Aided Diagnosis (CAD) systems often fail to capture this context, leading to misclassification of "visual mimics" (e.g., Early Melanoma vs. Benign Keratosis).
 
 This project presents a **Multimodal Integrated Framework** that fuses **ResNet50-processed visual data** with **Bi-LSTM-processed clinical narratives**. By mimicking the holistic diagnostic workflow of a dermatologist, our proposed fusion model achieves a significant performance leap over unimodal baselines.
 
-## 📊 Dataset: ISIC 2019
+## Dataset: ISIC 2019
 
 The system is trained on the **ISIC 2019** dataset, utilizing **25,447 dermoscopic images** across 8 diagnostic categories.
 
@@ -27,7 +27,7 @@ The system is trained on the **ISIC 2019** dataset, utilizing **25,447 dermoscop
 | **VASC** | Vascular Lesion | Blood vessel abnormalities |
 | **SCC** | Squamous Cell Carcinoma | Second most common skin cancer |
 
-## 🧠 System Architecture
+## System Architecture
 
 The model employs a **Late Fusion** strategy combining two distinct deep learning streams:
 
@@ -45,7 +45,7 @@ The model employs a **Late Fusion** strategy combining two distinct deep learnin
 * Features from the Global Average Pooling layer (Visual) and Attention layer (Text) are concatenated.
 * Passed through a dense classification head to predict the probability distribution across the 8 classes.
 
-## 🚀 Key Results
+## Key Results
 
 The multimodal approach demonstrates superior performance compared to using images alone, particularly in sensitivity for malignant classes.
 
@@ -57,7 +57,7 @@ The multimodal approach demonstrates superior performance compared to using imag
 
 > **Impact:** The system achieved a **96% Recall for Melanoma**, drastically reducing false negatives for the most dangerous skin cancer type.
 
-## 🛠️ Installation & Usage
+## Installation & Usage
 
 ### Prerequisites
 * Python 3.x
